@@ -1,10 +1,6 @@
 //
 //  main.cpp
 //  cpptutorial
-//
-//  Created by mac on 2022/8/10.
-//
-
 //创建项目
 //创建文件
 //编写代码
