@@ -252,23 +252,94 @@ int main(int argc, const char * argv[]) {
     //外层执行一次，内层执行一周
     //打印一行星图
     //外层循环
-    for (int i = 0; i < 10; i++) {
-        //内层循环
-        for (int j = 0; j<10; j++) {
-            cout << "* ";
-        }
-        cout << "\n";
-    }
+    //    for (int i = 0; i < 10; i++) {
+    //        //内层循环
+    //        for (int j = 0; j<10; j++) {
+    //            cout << "* ";
+    //        }
+    //        cout << "\n";
+    //    }
     
     //乘法口诀表
-    for (int i = 1; i <= 9; i++) {
-        for (int j = 1; j <= i; j++) {
-            cout << j << " * " << i << " = " << j * i << "  ";
+    //    for (int i = 1; i <= 9; i++) {
+    //        for (int j = 1; j <= i; j++) {
+    //            cout << j << " * " << i << " = " << j * i << "  ";
+    //        }
+    //        cout << "\n";
+    //    }
+    
+    //break的使用时机
+    
+    //1、出现在switch语句中
+    //    cout << "请选择副本的难度" << endl;
+    //    cout << "1、普通" << endl;
+    //    cout << "2、中等" << endl;
+    //    cout << "3、困难" << endl;
+    //
+    //    int select = 0;//创建选择结果的变量
+    //    cin >> select;//等待用户输入
+    //
+    //    switch (select) {
+    //        case 1:
+    //            cout << "你选择的是普通难度" << endl;
+    //            break;//退出switch语句
+    //        case 2:
+    //            cout << "你选择的是中等难度" << endl;
+    //            break;
+    //        case 3:
+    //            cout << "你选择的是困难难度" << endl;
+    //            break;
+    //
+    //        default:
+    //            break;
+    //    }
+    //2、出现在循环语句中
+    //    for (int i = 0; i < 10; i++) {
+    //        //如果i等于5，退出循环，不再打印
+    //        if (i == 5) {
+    //            break; //退出循环
+    //        }
+    //        cout << i << endl;
+    //    }
+    
+    //3、出现在嵌套循环语句中
+    //    for (int i = 0; i < 10; i++) {
+    //        for (int j = 0; j < 10; j++) {
+    //            if (j == 5) {
+    //                break;//退出内层循环
+    //            }
+    //            cout << "* ";
+    //        }
+    //        cout << endl;
+    //    }
+    
+    //continue语句
+    //作用：在循环语句中，跳过本次循环中余下尚未执行语句，继续执行下一次循环
+        for (int i = 0; i < 100 ; i++) {
+            //如果是奇数就输出，偶数不输出
+            if (i % 2 == 0) {
+                continue;//可以筛选条件，执行到此就不再向下执行，执行下一次循环
+                //break 会跳出循环，而continue不会使整个循环终止
+            }
+            cout << i << endl;
         }
-        cout << "\n";
-    }
     
+    //goto语句
+    //作用：可以无条件跳转语句
+    //语法：goto 标记
+    //解释：如果标记的名称存在，执行到goto语句时，会跳转到标记的位置
     
+    //    cout << "1、xxx" << endl;
+    //    cout << "2、xxx" << endl;
+    //    goto FLAG;
+    //    cout << "3、xxx" << endl;
+    //    cout << "4、xxx" << endl;
+    //    FLAG:
+    //    cout << "5、xxx" << endl;
+    //    cout << "6、xxx" << endl;
+    //    cout << "7、xxx" << endl;
+    
+    //在程序中不建议使用goto语句，以免造成程序流程混乱
     
     return 0;
 }
