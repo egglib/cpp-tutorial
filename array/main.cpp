@@ -222,7 +222,16 @@ int main(int argc, const char * argv[]) {
     cout << "二维数组第一个元素的首地址：" << &arr11[0][0] << endl;
     cout << "二维数组第二个元素的首地址：" << &arr11[0][1] << endl;
 
-    
+    //统计考试成绩
+    //创建二维数组
+    int scores[3][3] = {{100,100,100},{90,50,100},{60,70,80}};
+    for (int i = 0; i < 3; i++) {
+        int sum = 0;//统计分数总和变量
+        for (int j = 0; j < 3; j++) {
+            sum += scores[i][j];
+        }
+        cout << "第" << i+i << "个人总和为："<<sum << endl;
+    }
     
     return 0;
     
